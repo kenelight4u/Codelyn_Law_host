@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
 
-    <!-- Local Bootstrap -->
-    <link rel="stylesheet" href="./Assets/CSS/bootstrap-grid.css">
-    <link rel="stylesheet" href="./Assets/CSS/bootstrap.css">
-
     <!-- Boostrap CDN CSS Links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -26,8 +22,10 @@
                 <div class="brand-name">
                     <a href="" class="logo">Primerion Chambers</a>
                 </div>
-                <div class="ham-burger">
-                    <i class="fa fa-bars"></i>
+                <div class="ham-burger" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
                 </div>
                 <div class="navbar">
                     <ul>
@@ -59,7 +57,7 @@
         </div>
     </section>
     <!-- End Home -->
-     <!-- MAIN SECTION -->
+    <!-- MAIN SECTION -->
     <div class="container">
         <h4 class="text-center py-4"><span>Wel</span>come To</h4>
         <div class="row mb-5">
@@ -94,14 +92,14 @@
                     law, corporate law, business law and divorce law. In 2000, we opened up a new branch in Kaduna with
                     cases rolling in. we covered cases as such family law, corporate law, business law and divorce law.
                 </p>
-            </div> 
+            </div>
         </div>
         <div class="row mt-5">
             <div class="col-sm-6">
                 <img src="./Assets/Images/about-img2.png" alt="" class="img-fluid">
             </div>
             <div class="col-sm-6 py-4">
-                <h5 class="mb-4" > <strong>Our Vision /Mission Statement</strong> </h5>
+                <h5 class="mb-4"> <strong>Our Vision /Mission Statement</strong> </h5>
                 <p>
                     We are dedicated and passionate in giving our clients the best and reliable legal services. We are
                     dedicated and passionate in giving our clients the best and reliable legal services. We are
@@ -120,10 +118,10 @@
             <div class="col-2"></div>
             <div class="col-8 py-5 px-5 history">
                 <div class="row">
-                    
+
                     <div class="col-md-6">
                         <h5 class="text-center mb-4"> <strong>Our History</strong> </h5>
-                        <h6 class="text-center"> <strong>Feb 20, 1998</strong>  </h6>
+                        <h6 class="text-center"> <strong>Feb 20, 1998</strong> </h6>
                         <p class="text-center mb-2">We won our first case</p>
                         <h6 class="text-center"> <strong>May 20, 1998</strong> </h6>
                         <p class="text-center mb-2">We opened our new office</p>
@@ -137,24 +135,28 @@
                     <div class="col-md-6 mt-4 mt-md-0 px-5">
                         <h5 class="mb-4"> <strong>Our Statics</strong> </h5>
                         <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <p class="mb-3">Corperate Law 80%</p>
                         <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <p class="mb-3">Human Rights Law 80%</p>
                         <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <p class="mb-3">Property Law 80%</p>
                         <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <p>Litigation Law 80%</p>
                     </div>
                 </div>
-                
+
             </div>
             <div class="col-2"></div>
         </div>
@@ -281,9 +283,10 @@
         // ham-burger
         const hamBurger = document.querySelector(".ham-burger");
 
-        hamBurger.addEventListener("click", function () {
+        function myFunction(hamBurger) {
+            hamBurger.classList.toggle("change");
             document.querySelector(".navbar").classList.toggle("show");
-        })
+        }
     </script>
 
     <!-- CDN VERSION OF ALL THE BOOTSTRAP JAVASCRIPT -->
